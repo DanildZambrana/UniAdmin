@@ -1,0 +1,38 @@
+#background{
+    -fx-background-color: #eeeeee;
+}
+
+#userPassField{
+    -fx-text-fill: #62727b;
+    -fx-font-family: "Roboto Medium", sans-serif;
+    -fx-pref-width: 300;
+    -fx-pref-height: 30;
+    -fx-prompt-text-fill: #808e95;
+    -jfx-focus-color: #62727b;
+    -jfx-unfocus-color: #808e95;
+}
+.jfx-button{
+    -fx-font-family: "Roboto Medium", sans-serif;
+    -fx-text-fill: #62727b;
+    -fx-border-color: #62727b;
+    -fx-cursor: hand;
+}
+#forgotPassButton{
+    -fx-font-family: "Roboto Medium", sans-serif;
+    -fx-border-color: none;
+    -fx-underline: true;
+}
+.label{
+    -fx-font-family: "Roboto Medium", sans-serif;
+    -fx-pref-width: 360;
+    -fx-pref-height: 30;
+    -fx-alignment: center;
+}
+#loading{
+    -fx-pref-width: 100;
+    -fx-alignment: center_left;
+
+}
+#spinnerLoading{
+    -fx-opacity: 0;
+}

@@ -1,0 +1,10 @@
+.label {
+    -fx-font-family: "Roboto Medium";
+}
+
+#options{
+    -fx-border-color: #37474f;
+    -fx-cursor: hand;
+    -fx-content-display: center;
+    -fx-font-family: "Roboto Medium";
+}

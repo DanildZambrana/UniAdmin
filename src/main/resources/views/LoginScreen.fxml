@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" stylesheets="@../styles/LoginStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="us.siriusteam.uniadmin.Controllers.LoginController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="101.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoGray.png" />
+         </image>
+      </ImageView>
+      <JFXTextField id="userPassField" fx:id="tfUserName" layoutX="50.0" layoutY="179.0" prefHeight="20.0" prefWidth="300.0" promptText="Usuario" />
+      <JFXPasswordField id="userPassField" fx:id="pfPassword" layoutX="50.0" layoutY="261.0" promptText="Contraseña" />
+      <JFXButton fx:id="btnLogin" defaultButton="true" layoutX="157.0" layoutY="358.0" onAction="#login" text="Iniciar sesión" textFill="#eeeeee">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="forgotPassButton" fx:id="btnForgotPassword" layoutX="240.0" layoutY="461.0" onAction="#recoverPass" text="Olvidaste tu contraseña?" />
+      <Label fx:id="lblInformation" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="318.0" prefHeight="17.0" prefWidth="300.0" />
+      <JFXSpinner id="spinnerLoading" fx:id="spinnerLoading" layoutX="14.0" layoutY="461.0" prefHeight="25.0" prefWidth="24.0" startingAngle="100.0" />
+      <Label id="loading" fx:id="lblLoading" layoutX="51.0" layoutY="459.0" />
+   </children>
+</AnchorPane>
