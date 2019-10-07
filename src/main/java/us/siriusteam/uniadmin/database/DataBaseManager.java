@@ -1,12 +1,10 @@
 package us.siriusteam.uniadmin.database;
 
-import us.siriusteam.uniadmin.Models.User;
-
 import java.sql.SQLException;
 import java.util.List;
 import java.util.UUID;
 
-public interface DataBaseManager {
+public interface DataBaseManager<T> {
 
     /**
      * Registra la tabla SQL si no existe.
@@ -17,20 +15,20 @@ public interface DataBaseManager {
     /**
      * Inserta el usuario en la tabla.
      *
-     * @param user
+     * @param t
      * @return La cantidad de campos modificados.
      * @throws SQLException Error al hacer la consulta.
      */
-    int insert(User user) throws SQLException;
+    int insert(T t) throws SQLException;
 
     /**
      * Actualiza el usuario a existente en la tabla.
      *
-     * @param user
+     * @param t
      * @return La cantidad de campos modificados.
      * @throws SQLException Error al hacer la consulta.
      */
-    int update(User user) throws SQLException;
+    int update(T t) throws SQLException;
 
     /**
      * Selecciona todos los usuarios existentes en la tabla.
@@ -38,7 +36,7 @@ public interface DataBaseManager {
      * @return Una lista ordenada por momento de ingreso de los usuarios en la tabla.
      * @throws SQLException Error al hacer la consulta.
      */
-    List<User> selectAll() throws SQLException;
+    List<T> selectAll() throws SQLException;
 
     /**
      * Selecciona un usuario en la tabla, a partir de su UUID
@@ -47,16 +45,16 @@ public interface DataBaseManager {
      * @return el usuario selecciona, y retorna null si no existe.
      * @throws SQLException
      */
-    User getUser(UUID uniqueId) throws SQLException;
+    T get(UUID uniqueId) throws SQLException;
 
     /**
-     * Selecciona un usuario en la tabla, a partir de su nombre
+     * Selecciona un dato en la tabla, a partir de su nombre
      *
-     * @param userName
+     * @param name
      * @return el usuario seleccionado, y retorna null si no existe.
      * @throws SQLException
      */
-    User getUser(String userName) throws SQLException;
+    T get(String name) throws SQLException;
 
 
 }

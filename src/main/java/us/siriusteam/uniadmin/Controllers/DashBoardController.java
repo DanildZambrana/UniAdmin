@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import org.jetbrains.annotations.NotNull;
 import us.siriusteam.uniadmin.Models.StudentsModel;
 import us.siriusteam.uniadmin.UniAdmin;
 
@@ -22,6 +23,7 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.Callable;
 
 public class DashBoardController implements Initializable {
 
@@ -101,7 +103,7 @@ public class DashBoardController implements Initializable {
         userImage.setPreserveRatio(false);
     }
 
-    private void selectMenu(Label label){
+    private void selectMenu(@NotNull Label label){
         List<Label> labels = Arrays.asList(lblDashBoard, lblStudents);
         labels.forEach(l -> l.setStyle("-fx-opacity: 0.5"));
         label.setStyle("-fx-opacity: 1");

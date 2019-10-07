@@ -4,7 +4,7 @@
 
 #userPassField{
     -fx-text-fill: #62727b;
-    -fx-font-family: "Roboto Medium", sans-serif;
+    -fx-font-family: "Roboto", sans-serif;
     -fx-pref-width: 300;
     -fx-pref-height: 30;
     -fx-prompt-text-fill: #808e95;
@@ -12,18 +12,18 @@
     -jfx-unfocus-color: #808e95;
 }
 .jfx-button{
-    -fx-font-family: "Roboto Medium", sans-serif;
+    -fx-font-family: "Roboto", sans-serif;
     -fx-text-fill: #62727b;
     -fx-border-color: #62727b;
     -fx-cursor: hand;
 }
 #forgotPassButton{
-    -fx-font-family: "Roboto Medium", sans-serif;
+    -fx-font-family: "Roboto", sans-serif;
     -fx-border-color: none;
     -fx-underline: true;
 }
 .label{
-    -fx-font-family: "Roboto Medium", sans-serif;
+    -fx-font-family: "Roboto", sans-serif;
     -fx-pref-width: 360;
     -fx-pref-height: 30;
     -fx-alignment: center;

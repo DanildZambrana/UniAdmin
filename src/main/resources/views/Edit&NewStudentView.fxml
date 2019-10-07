@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" stylesheets="@../styles/EditAndNewStudentStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="us.siriusteam.uniadmin.Controllers.EditAndNewStudentController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <HBox alignment="CENTER" prefHeight="120.0" prefWidth="500.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../../../../../OneDrive/Imágenes/._.XD.jpg" />
+                     </image>
+                  </ImageView>
+                  <Separator prefHeight="0.0" prefWidth="0.0" />
+                  <JFXButton id="options" text="Cambiar imagen" />
+               </children>
+            </HBox>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <GridPane alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="30.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="110.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="350.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="13.0" prefWidth="200.0" text="Nombres" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="tfNames" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Apellidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Carrera" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <JFXTextField fx:id="tfLastName" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="cbCareers" promptText="Seleccione carrera" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                  <Label text="Año Cursado" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <JFXTextField fx:id="tfYearCursed" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                  <Label text="Fecha Nacimiento" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="Sexo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="Religion" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="Numero de cédula" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Direccion" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label text="Zona" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <Label text="Numero de telefono" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                  <Label text="Email" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <children>
+                        <JFXRadioButton text="Catolico">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="religion" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <Separator prefHeight="0.0" prefWidth="0.0" />
+                        <JFXRadioButton text="Evangelico" toggleGroup="$religion" />
+                        <Separator prefHeight="0.0" prefWidth="0.0" />
+                        <JFXRadioButton text="Otro:" toggleGroup="$religion" />
+                        <Separator prefHeight="0.0" prefWidth="0.0" />
+                        <JFXTextField fx:id="tfOtherReligion" prefHeight="0.0" prefWidth="134.0" />
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="tfIdCard" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <children>
+                        <JFXTextField fx:id="tfCity" promptText="Ciudad" />
+                        <Separator prefHeight="0.0" prefWidth="0.0" />
+                        <JFXTextField fx:id="tfDepartment" promptText="Departamento" />
+                        <Separator prefHeight="0.0" prefWidth="0.0" />
+                        <JFXTextField fx:id="tfcountry" prefHeight="26.0" prefWidth="115.0" promptText="Pais" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="11">
+                     <children>
+                        <JFXRadioButton text="Rural">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="zone" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <Separator prefHeight="0.0" prefWidth="0.0" />
+                        <JFXRadioButton text="Urbano" toggleGroup="$zone" />
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="tfPhoneNumber" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                  <JFXTextField fx:id="tfEmail" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                  <JFXComboBox fx:id="cbSex" promptText="Sexo" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <JFXDatePicker fx:id="dpDateOfBirth" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label text="ID" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="tfId" GridPane.columnIndex="2" />
+                  <Label text="Estado civil" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                     <children>
+                        <JFXRadioButton text="Soltero">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="civilStatus" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <Separator prefHeight="0.0" prefWidth="0.0" />
+                        <JFXRadioButton text="Casado" toggleGroup="$civilStatus" />
+                        <Separator prefHeight="0.0" prefWidth="0.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="500.0">
+               <children>
+                  <JFXButton id="options" fx:id="btnAccept" onAction="#accept" text="Aceptar" />
+                  <Separator prefHeight="0.0" prefWidth="0.0" />
+                  <JFXButton id="options" fx:id="btnCancel" onAction="#cancel" text="Cancelar" />
+                  <Separator prefHeight="4.0" prefWidth="0.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

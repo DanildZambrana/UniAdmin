@@ -3,37 +3,27 @@ package us.siriusteam.uniadmin.Controllers;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
+import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import us.siriusteam.uniadmin.Models.StudentsModel;
 import us.siriusteam.uniadmin.UniAdmin;
 import us.siriusteam.uniadmin.students.Careers;
-import us.siriusteam.uniadmin.utils.Utils;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class StudentsController implements Initializable {
@@ -59,6 +49,63 @@ public class StudentsController implements Initializable {
     private ObservableList<StudentsModel> studentData = FXCollections.observableArrayList();
 
     @FXML
+    private ImageView ivStudentAvatar;
+
+    @FXML
+    private JFXTextField tfID;
+
+    @FXML
+    private JFXTextField tfName;
+
+    @FXML
+    private JFXTextField tfLastName;
+
+    @FXML
+    private JFXTextField tfIdCard;
+
+    @FXML
+    private JFXTextField tfDateOfBirth;
+
+    @FXML
+    private JFXTextField tfSex;
+
+    @FXML
+    private JFXTextField tfReligion;
+
+    @FXML
+    private JFXTextField tfDirecction;
+
+    @FXML
+    private JFXTextField tfCareer;
+
+    @FXML
+    private JFXTextField tfYearCursed;
+
+    @FXML
+    private JFXTextField tfCivilStatus;
+
+    @FXML
+    private JFXTextField tfZone;
+
+    @FXML
+    private JFXTextField tfPhoneNumber;
+
+    @FXML
+    private JFXTextField tfEmail;
+
+    @FXML
+    private JFXButton btnNewStudent;
+
+    @FXML
+    private JFXButton btnShowScore;
+
+    @FXML
+    private JFXButton btnShowEditStudent;
+
+    @FXML
+    private JFXButton btnDeleteStudent;
+
+    @FXML
     void deleteStudent(ActionEvent event) {
         JFXDialogLayout layout = new JFXDialogLayout();
         layout.getStylesheets().add("styles/DialogStyle.css"); //css stylesheet
@@ -66,7 +113,7 @@ public class StudentsController implements Initializable {
         layout.setBody(new Label("Al presionar aceptar eliminara este registro, esta accion no se puede deshacer.\n" +
                 "Si no quiere hacerlo, presione cancelar")); // Body of dialog
 
-        JFXDialog dialog = new JFXDialog(pane, layout, JFXDialog.DialogTransition.CENTER);
+        JFXDialog dialog = new JFXDialog(pane, layout, JFXDialog.DialogTransition.CENTER, false);
 
         //Buttons
         JFXButton accept = new JFXButton("Aceptar"); //Accept button
@@ -83,7 +130,26 @@ public class StudentsController implements Initializable {
 
     @FXML
     void showEditStudent(ActionEvent event) {
+        try{
+            // Carga el diseño raiz del archivo fxml
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(UniAdmin.class.getClassLoader().getResource("views/Edit&NewStudentView.fxml"));
+            StackPane studentLayout = (StackPane) loader.load();
+            EditAndNewStudentController controller = loader.getController();
 
+            // Mostrar la escena que contiene el diseño de la raiz.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Notas");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(LoginController.getDashBoardStage());
+            Scene scene = new Scene(studentLayout);
+            dialogStage.setScene(scene);
+            controller.setName("Juan Zeledon");
+
+            dialogStage.showAndWait();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
 
@@ -110,35 +176,28 @@ public class StudentsController implements Initializable {
     }
     @FXML
     void showNewStudent(ActionEvent event) {
+        try{
+            // Carga el diseño raiz del archivo fxml
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(UniAdmin.class.getClassLoader().getResource("views/Edit&NewStudentView.fxml"));
+            StackPane studentLayout = (StackPane) loader.load();
 
+            // Mostrar la escena que contiene el diseño de la raiz.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Notas");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(LoginController.getDashBoardStage());
+            Scene scene = new Scene(studentLayout);
+            dialogStage.setScene(scene);
+
+            dialogStage.showAndWait();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        studentData.add(new StudentsModel("100", "Juan", "Zeledon", new Careers(25, "Contabilidad", 5)));
-        studentData.add(new StudentsModel("110", "Pedro", "Zeledon", new Careers(25, "IGA", 5)));
-        studentData.add(new StudentsModel("120", "Julia", "Zeledon", new Careers(25, "Sistemas", 5)));
-        studentData.add(new StudentsModel("130", "Maria", "Zeledon", new Careers(25, "Ingles", 5)));
-        studentData.add(new StudentsModel("140", "Jose", "Zeledon", new Careers(25, "Enfermeria", 5)));
-studentData.add(new StudentsModel("100", "Juan", "Zeledon", new Careers(25, "Contabilidad", 5)));
-        studentData.add(new StudentsModel("110", "Pedro", "Zeledon", new Careers(25, "IGA", 5)));
-        studentData.add(new StudentsModel("120", "Julia", "Zeledon", new Careers(25, "Sistemas", 5)));
-        studentData.add(new StudentsModel("130", "Maria", "Zeledon", new Careers(25, "Ingles", 5)));
-        studentData.add(new StudentsModel("140", "Jose", "Zeledon", new Careers(25, "Enfermeria", 5)));
-studentData.add(new StudentsModel("100", "Juan", "Zeledon", new Careers(25, "Contabilidad", 5)));
-        studentData.add(new StudentsModel("110", "Pedro", "Zeledon", new Careers(25, "IGA", 5)));
-        studentData.add(new StudentsModel("120", "Julia", "Zeledon", new Careers(25, "Sistemas", 5)));
-        studentData.add(new StudentsModel("130", "Maria", "Zeledon", new Careers(25, "Ingles", 5)));
-        studentData.add(new StudentsModel("140", "Jose", "Zeledon", new Careers(25, "Enfermeria", 5)));
-studentData.add(new StudentsModel("100", "Juan", "Zeledon", new Careers(25, "Contabilidad", 5)));
-        studentData.add(new StudentsModel("110", "Pedro", "Zeledon", new Careers(25, "IGA", 5)));
-        studentData.add(new StudentsModel("120", "Julia", "Zeledon", new Careers(25, "Sistemas", 5)));
-        studentData.add(new StudentsModel("130", "Maria", "Zeledon", new Careers(25, "Ingles", 5)));
-        studentData.add(new StudentsModel("140", "Jose", "Zeledon", new Careers(25, "Enfermeria", 5)));
-studentData.add(new StudentsModel("100", "Juan", "Zeledon", new Careers(25, "Contabilidad", 5)));
-        studentData.add(new StudentsModel("110", "Pedro", "Zeledon", new Careers(25, "IGA", 5)));
-        studentData.add(new StudentsModel("120", "Julia", "Zeledon", new Careers(25, "Sistemas", 5)));
-        studentData.add(new StudentsModel("130", "Maria", "Zeledon", new Careers(25, "Ingles", 5)));
-        studentData.add(new StudentsModel("140", "Jose", "Zeledon", new Careers(25, "Enfermeria", 5)));
+        /*studentData.add(new StudentsModel("100", "Juan", "Zeledon", new Careers(25, "Contabilidad", 5)));*/
 
 
         studentIdColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty());
