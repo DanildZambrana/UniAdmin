@@ -1,0 +1,70 @@
+.label{
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-pref-width: 360;
+    -fx-pref-height: 30;
+    -fx-alignment: center;
+}
+.jfx-button{
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-text-fill: #62727b;
+    -fx-border-color: #62727b;
+    -fx-cursor: hand;
+}
+.separator{
+    visibility: false;
+}
+.jfx-date-picker{
+    -jfx-default-color: #344955;
+}
+.jfx-text-field{
+    -fx-text-fill: #62727b;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-prompt-text-fill: #808e95;
+    -jfx-focus-color: #62727b;
+    -jfx-unfocus-color: #808e95;
+}
+
+.jfx-combo-box{
+    -fx-text-fill: #62727b;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-prompt-text-fill: #808e95;
+    -jfx-focus-color: #62727b;
+    -jfx-unfocus-color: #808e95;
+}
+.jfx-radio-button{
+    -jfx-selected-color: #62727b;
+    -fx-text-fill: #62727b;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-prompt-text-fill: #808e95;
+}
+/*.day-name-cell.date-cell, .week-number-cell.date-cell {
+}
+.date-cell {
+    -fx-font-family: "Roboto";
+}*/
+
+/*
+.data-picker-list-cell {
+    -fx-text-fill: #62727b;;
+    -fx-font-weight: bold;
+}
+
+.day-name-cell.date-cell, .week-number-cell.date-cell {
+    -fx-text-fill: rgb(100, 100, 100);
+}
+
+.date-cell {
+    -fx-font-family: "Roboto";
+}
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #344955;
+}
+
+.date-cell:selected, .date-cell:focused, .date-cell:hover {
+    -fx-text-fill: rgb(20, 20, 20);
+    -fx-font-weight: bold;
+}
+
+.spinner-label {
+    -fx-text-fill: rgb(100, 100, 100);
+}*/

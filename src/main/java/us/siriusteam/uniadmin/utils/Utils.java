@@ -1,15 +1,8 @@
 package us.siriusteam.uniadmin.utils;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXDialog;
-import com.jfoenix.controls.JFXDialogLayout;
-import javafx.event.EventHandler;
-import javafx.scene.Node;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import org.apache.commons.codec.binary.Base64;
-import us.siriusteam.uniadmin.Models.User;
+import us.siriusteam.uniadmin.Models.UserModel;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -75,7 +68,7 @@ public class Utils {
 
 
     //Obtener un usuario
-    public static User getUser(UUID uuid){
+    public static UserModel getUser(UUID uuid){
         return null;
     }
 
