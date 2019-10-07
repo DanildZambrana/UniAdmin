@@ -67,7 +67,7 @@
     -fx-pref-width: 150;
     -fx-alignment: center;
     -fx-fill: #000000;
-    -fx-font-family: "Roboto";
+    -fx-font-family: "Roboto Medium";
 }
 
 #vboxInfo{
@@ -75,19 +75,17 @@
 }
 
 #options{
-    -fx-font-family: "Roboto", sans-serif;
-    -fx-text-fill: #62727b;
-    -fx-border-color: #62727b;
-    -fx-cursor: hand;
-    -fx-content-display: center;
-}
-
-#optionsScore{
-
     -fx-border-color: #37474f;
     -fx-cursor: hand;
     -fx-content-display: center;
-    -fx-font-family: "Roboto";
+    -fx-font-family: "Roboto Medium";
+}
+
+#optionsScore{
+    -fx-border-color: #37474f;
+    -fx-cursor: hand;
+    -fx-content-display: center;
+    -fx-font-family: "Roboto Medium";
     -fx-pref-width: 100;
 }
 .separator{

@@ -1,10 +1,19 @@
 package us.siriusteam.uniadmin;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import us.siriusteam.uniadmin.Models.User;
 import us.siriusteam.uniadmin.database.sql.users.UsersManager;
 import us.siriusteam.uniadmin.utils.Utils;
 
@@ -12,6 +21,9 @@ import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.UUID;
 import java.util.logging.Logger;
 
 public class UniAdmin extends Application {
@@ -47,7 +59,7 @@ public class UniAdmin extends Application {
     }
 
     public static void main(String[] args) throws SQLException, IOException {
-        Utils.loadFont(getAbsolutePath()+File.separator+"Fonts", "Roboto-Regular.ttf");
+        Utils.loadFont(getAbsolutePath()+File.separator+"Fonts", "Roboto-Medium.ttf");
 
         /*usersManager.insert(new User("Admin", "admin", "asdsa", "asdas", LocalDate.now(),"asdasdsa", "asdads", Arrays.asList("hola", "asdas"), new UUID(System.nanoTime(), System.currentTimeMillis()), new LocalDate[15]));*/
         setAbsolutePath();

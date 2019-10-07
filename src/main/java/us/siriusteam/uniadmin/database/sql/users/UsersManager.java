@@ -2,13 +2,13 @@ package us.siriusteam.uniadmin.database.sql.users;
 
 import us.siriusteam.uniadmin.database.DataBaseManager;
 import us.siriusteam.uniadmin.database.sql.ConnectSQL;
-import us.siriusteam.uniadmin.Models.UserModel;
+import us.siriusteam.uniadmin.Models.User;
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.*;
 
-public class UsersManager implements DataBaseManager<UserModel> {
+public class UsersManager implements DataBaseManager {
 
     private ConnectUsers connectUsers = null;
     private Connection sqlConnection = null;
@@ -49,17 +49,17 @@ public class UsersManager implements DataBaseManager<UserModel> {
     }
 
     @Override
-    public int insert(UserModel userModel) throws SQLException {
+    public int insert(User user) throws SQLException {
         //Parametros del objeto usuario.
-        String userName = userModel.getUserName();
-        String password= userModel.getPassword();
-        String name = userModel.getName();
-        String lastName = userModel.getLastName();
-        LocalDate dateOfBirth = userModel.getDateOfBirth();
-        String address = userModel.getAddress();
-        String profileImageLocation = userModel.getProfileImageLocation();
-        UUID uniqueId = userModel.getUniqueId();
-        List<String> permissions = userModel.getPermissions();
+        String userName = user.getUserName();
+        String password= user.getPassword();
+        String name = user.getName();
+        String lastName = user.getLastName();
+        LocalDate dateOfBirth = user.getDateOfBirth();
+        String address = user.getAddress();
+        String profileImageLocation = user.getProfileImageLocation();
+        UUID uniqueId = user.getUniqueId();
+        List<String> permissions = user.getPermissions();
         //Fin de los parametros del objeto usuario.
 
         final String QUERY = "INSERT INTO users(UUID, UserName, Password, Name, LastName, DateOfBirth, Address, ProfileImageLocation, Permissions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -91,29 +91,29 @@ public class UsersManager implements DataBaseManager<UserModel> {
     }
 
     @Override
-    public int update(UserModel userModel) throws SQLException {
+    public int update(User user) throws SQLException {
         return 0;
     }
 
     @Override
-    public List<UserModel> selectAll() throws SQLException {
+    public List<User> selectAll() throws SQLException {
         return null;
     }
 
     @Override
-    public UserModel get(UUID uniqueId) throws SQLException {
+    public User getUser(UUID uniqueId) throws SQLException {
         return null;
     }
 
     @Override
-    public UserModel get(String userName) throws SQLException {
+    public User getUser(String userName) throws SQLException {
         final String QUERY = "SELECT * FROM users WHERE UserName=?";
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
         ResultSet resultSet = null;
 
-        UserModel userModel = null;
+        User user = null;
 
         try {
             connection = (sqlConnection != null) ? sqlConnection : connectUsers.getConnection();
@@ -124,27 +124,27 @@ public class UsersManager implements DataBaseManager<UserModel> {
             resultSet = preparedStatement.executeQuery();
 
             if(resultSet.next()){
-                userModel = new UserModel();
+                user = new User();
 
-                userModel.setUserName(resultSet.getString("UserName"));
-                userModel.setPassword(resultSet.getString("Password"));
-                userModel.setName(resultSet.getString("Name"));
-                userModel.setLastName(resultSet.getString("LastName"));
+                user.setUserName(resultSet.getString("UserName"));
+                user.setPassword(resultSet.getString("Password"));
+                user.setName(resultSet.getString("Name"));
+                user.setLastName(resultSet.getString("LastName"));
                 String[] date = resultSet.getString("DateOfBirth").split("-");
 
-                userModel.setDateOfBirth(LocalDate.of(Integer.parseInt(date[0]), Integer.parseInt(date[1]), Integer.parseInt(date[2])));
-                userModel.setAddress(resultSet.getString("Address"));
-                userModel.setProfileImageLocation(resultSet.getString("ProfileImageLocation"));
-                userModel.setUniqueId(UUID.fromString(resultSet.getString("UUID")));
+                user.setDateOfBirth(LocalDate.of(Integer.parseInt(date[0]), Integer.parseInt(date[1]), Integer.parseInt(date[2])));
+                user.setAddress(resultSet.getString("Address"));
+                user.setProfileImageLocation(resultSet.getString("ProfileImageLocation"));
+                user.setUniqueId(UUID.fromString(resultSet.getString("UUID")));
 
                 String perms = resultSet.getString("Permissions");
                 List<String> permissions = (perms.equals("[]") ? new ArrayList<>() : Arrays.asList(perms.substring(1, perms.length() - 1).split(", ")));
-                userModel.setPermissions(permissions);
+                user.setPermissions(permissions);
             }else {
                 return null;
             }
 
-            return userModel;
+            return user;
         }catch (SQLException e){
             e.printStackTrace();
         }finally {

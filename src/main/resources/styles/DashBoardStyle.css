@@ -1,9 +1,9 @@
 #leftPane{
-    -fx-background-color: #344955;
+    -fx-background-color: #37474f;
     -fx-alignment: top_center;
 }
 #toolPane{
-    -fx-background-color: #344955;
+    -fx-background-color: #37474f;
     -fx-alignment: center_left;
 }
 #optionsDashBoard {
@@ -11,7 +11,7 @@
     -fx-content-display: center;
 }
 #menuOptions{
-    -fx-font-family: "Roboto";
+    -fx-font-family: "Roboto Black";
     -fx-opacity: 0.5;
     -fx-pref-width: 200;
     -fx-font-size: 22;
@@ -25,7 +25,7 @@
     -fx-pref-height: 40;
 }
 #userName{
-    -fx-font-family: "Roboto";
+    -fx-font-family: "Roboto Black";
     -fx-text-fill: #eeeeee;
     -fx-text-overrun: clip;
     -fx-alignment: center;

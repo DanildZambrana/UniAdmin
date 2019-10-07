@@ -18,7 +18,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import us.siriusteam.uniadmin.UniAdmin;
 import us.siriusteam.uniadmin.database.sql.users.UsersManager;
-import us.siriusteam.uniadmin.Models.UserModel;
+import us.siriusteam.uniadmin.Models.User;
 
 import java.io.IOException;
 import java.net.URL;
@@ -80,18 +80,12 @@ public class LoginController implements Initializable {
 
     private boolean login(String userName, String pass) throws SQLException {
         UsersManager usersManager = new UsersManager();
+        User user = usersManager.getUser(userName);
 
-        UserModel userModel = null;
-        try {
-            userModel = usersManager.get(userName);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if(userModel == null){
+        if(user == null){
             return false;
         }
-        return pass.equals(userModel.getPassword());
+        return pass.equals(user.getPassword());
     }
 
     private static BorderPane rootLayout;

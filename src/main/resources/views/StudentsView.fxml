@@ -30,12 +30,12 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                      </columnResizePolicy>
                   </TableView>
-                  <ImageView id="asd" fx:id="ivStudentAvatar" fitHeight="150.0" fitWidth="150.0" layoutX="534.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="asd" fitHeight="150.0" fitWidth="150.0" layoutX="534.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Dashboardscreen/1.png" />
                      </image>
                   </ImageView>
-                  <VBox id="vboxInfo" alignment="TOP_CENTER" layoutX="392.0" layoutY="220.0" prefHeight="464.0" prefWidth="413.0" AnchorPane.bottomAnchor="45.0">
+                  <VBox id="vboxInfo" alignment="TOP_CENTER" layoutX="392.0" layoutY="220.0" prefHeight="464.0" prefWidth="413.0" AnchorPane.bottomAnchor="55.0">
                      <children>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
                         <HBox alignment="CENTER" prefHeight="26.0" prefWidth="416.0">
@@ -43,7 +43,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="ID" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfID" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -52,7 +52,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Nombre" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfName" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -61,7 +61,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Apellido" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfLastName" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -70,7 +70,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Numero de Cedula" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfIdCard" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -79,7 +79,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Fecha de nacimiento" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfDateOfBirth" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -88,7 +88,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Sexo" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfSex" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -97,7 +97,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Religión" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfReligion" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -106,7 +106,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Direccion" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfDirecction" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -115,7 +115,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Carrera" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfCareer" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -124,7 +124,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Año cursado" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfYearCursed" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -133,7 +133,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Estado civil" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfCivilStatus" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -142,25 +142,7 @@
                               <Separator prefHeight="0.0" prefWidth="0.0" />
                               <Label id="lblInfo" text="Zona" />
                               <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfZone" editable="false" />
-                           </children>
-                        </HBox>
-                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
-                        <HBox alignment="CENTER" prefHeight="26.0" prefWidth="416.0">
-                           <children>
-                              <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <Label id="lblInfo" text="Numero de telefono" />
-                              <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfPhoneNumber" editable="false" />
-                           </children>
-                        </HBox>
-                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
-                        <HBox alignment="CENTER" prefHeight="26.0" prefWidth="416.0">
-                           <children>
-                              <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <Label id="lblInfo" text="Email" />
-                              <Separator prefHeight="0.0" prefWidth="0.0" />
-                              <JFXTextField id="tfInfo" fx:id="tfEmail" editable="false" />
+                              <JFXTextField id="tfInfo" disable="true" />
                            </children>
                         </HBox>
                         <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
@@ -168,14 +150,13 @@
                   </VBox>
                   <HBox alignment="CENTER" layoutX="430.0" layoutY="645.0" prefHeight="38.0" prefWidth="338.0" AnchorPane.bottomAnchor="10.0">
                      <children>
-                        <JFXButton id="options" fx:id="btnNewStudent" onAction="#showNewStudent" text="Nuevo Estudiante" />
-                        <Separator id="separator" orientation="VERTICAL" prefHeight="200.0" />
+                        <JFXButton id="options" onAction="#showScore" text="Ver Notas" />
                         <Separator prefHeight="0.0" prefWidth="0.0" />
-                        <JFXButton id="options" fx:id="btnShowScore" onAction="#showScore" text="Ver Notas" />
+                        <JFXButton id="options" onAction="#showNewStudent" text="Nuevo Estudiante" />
                         <Separator prefHeight="0.0" prefWidth="0.0" />
-                        <JFXButton id="options" fx:id="btnShowEditStudent" onAction="#showEditStudent" text="Editar" />
+                        <JFXButton id="options" onAction="#showEditStudent" text="Editar" />
                         <Separator prefHeight="0.0" prefWidth="0.0" />
-                        <JFXButton id="options" fx:id="btnDeleteStudent" onAction="#deleteStudent" text="Borrar" />
+                        <JFXButton id="options" onAction="#deleteStudent" text="Borrar" />
                      </children>
                   </HBox>
                </children>
