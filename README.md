@@ -1,2 +1,7 @@
 # UniAdmin
- Sistema de control de registro academico.
+UniAdmin, (University Administration) es un sistema digital semi automatizado, está diseñado y creado en JAVA8 y usando la API de JFoenix (javaFx material design).
+Se ha elaborado haciendo uso de las reglas y guías publicadas por google para tener una interfaz más llamativa, mejor organizada y una mejor adaptación a los distintos dispositivos digitales, lo cual da un resultado de una mejor presentación de interfaz.
+UniAdmin está siendo creado en sus primeras versiones como un sistema semi-automatizado offline, pero en sus próximas versiones se agregará la función online, en la cual se requerirá un servidor para alojar los datos de la app.
+UniAdmin por el momento es un sistema que no requiere de una instalación manual, dado que es un software portable en donde acceder al programa está a la distancia de un clic. Se puede guardar en una USB y ejecutarse en cualquier sistema operativo compatible con JAVA8 (Mac OS X, Windows, Linux y Solaris) y que cumpla los requisitos mínimos (2 GB de RAM, 50 MB de espacio, acceso a internet y un sistema operativo de 64 bits).
+Al inicio se le proporcionará al usuario un archivo el cual se debe abrir y el programa descargará automáticamente los archivos necesarios. Luego de que finalice la descarga el programa dará inicio.
+La primera vez que se haga uso habrá datos de inicio de sesión por default usuario=Admin, contraseña= admin; los cuales se deberán cambiar en ajustes (engranajes a la derecha del nombre del usuario) > configuración de usuario > cambiar contraseña.
